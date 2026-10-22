@@ -1,23 +1,98 @@
 aid: vicinity-centres
+
 name: Vicinity Centres
-description: 'Vicinity Centres is a company surfaced via the API Evangelist harvest backlog (source: australia-apidays-2026)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Vicinity Centres (ASX: VCX; legal entity Vicinity Centres Pty. Ltd.) is an Australian retail property owner and manager whose portfolio of retail-led destinations ranges from premium centres such as Chadstone and Queen Victoria Building to DFO outlets and local neighbourhood centres. Its site describes in-house data science and strategic insights teams that support data-led leasing, plus retail solutions covering advertising, brand activations and pop-up retail. Retail partners use the Vicinity Connect retailer portal (portal.vicinity.com.au), which requires an invite and login; no public developer documentation or API reference was found on its sites.'
+
 url: https://raw.githubusercontent.com/api-evangelist/vicinity-centres/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:australia-apidays-2026
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-22 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-22'
+
 modified: '2026-10-22'
+
 tags:
 - Company
-apis: []
+- Retail
+- Real Estate
+- Shopping Centres
+- Property Management
+- Australia
+- Leasing
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
+image: https://avatars.githubusercontent.com/u/36715356?v=4
+
 common:
+- type: Hosts
+  url: hosts/vicinity-centres-hosts.yml
+- type: Vendors
+  url: vendors/vicinity-centres-vendors.yml
+- type: SDKs
+  url: packages/vicinity-centres-packages.yml
+- type: Packages
+  url: packages/vicinity-centres-packages.yml
+- type: DomainSecurity
+  url: security/vicinity-centres-domain-security.yml
 - type: Website
-  url: https://vicinity.com.au/
+  url: https://www.vicinity.com.au/
+- type: Login
+  url: https://portal.vicinity.com.au/login
+  description: Vicinity Connect retailer portal (invite-only login).
+- type: Support
+  url: https://www.vicinity.com.au/contact-us
+- type: Newsroom
+  url: https://www.vicinity.com.au/about-us/newsroom
+- type: Investors
+  url: https://www.vicinity.com.au/investors
+- type: Careers
+  url: https://www.vicinity.com.au/about-us/careers
+- type: TermsOfService
+  url: https://www.vicinity.com.au/terms-and-conditions
+- type: PrivacyPolicy
+  url: https://www.vicinity.com.au/privacy-policy
+- type: GitHubOrganization
+  url: https://github.com/vicinity
+- type: LinkedIn
+  url: https://www.linkedin.com/company/vicinity_centres/
+
+apis: []
+
+x-coverage:
+  state: covered
+  reason: identity-verified
+  detail: Website redirects vicinity.com.au -> www.vicinity.com.au (title "Home | Vicinity Centres", rendered 200; plain curl gets a Cloudflare challenge but preflight front_door verdict is open). Portal is a login-gated retailer portal; its /graphql answers 401 (gated). No public developer docs found.
+  evidence:
+  - url: https://www.vicinity.com.au/
+    status: 200
+  - url: https://portal.vicinity.com.au/
+    status: 200
+  - url: https://api.github.com/orgs/vicinity
+    status: 200
+  - url: https://www.vicinity.com.au/contact-us
+    status: 200
+  - url: https://www.vicinity.com.au/about-us/careers
+    status: 200
+  - url: https://www.vicinity.com.au/investors
+    status: 200
+  - url: https://www.linkedin.com/company/vicinity_centres/
+    status: 200
+x-enrichment:
+  date: '2026-10-22'
+  status: enriched
+  artifacts_added: 9
+  pass: modular-v1
+  engine: identity=anthropic,contract=anthropic,surfaces=anthropic,docs=anthropic,regulatory=anthropic

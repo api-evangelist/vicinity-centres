@@ -1,0 +1,29 @@
+generated: '2026-10-22'
+method: searched
+source: https://registry.npmjs.org/-/v1/search?text=vicinity%20centres
+name: Vicinity Centres packages
+note: >-
+  No API client SDK was found. The only packages published under the provider's npm scope (@vicinity,
+  maintained by vcx.digital / rp-vcx and linked to the github.com/vicinity org, whose profile names
+  Vicinity Centres) are internal engineering configuration packages (lint and TypeScript config), not
+  clients of any API. Searched npm; no Vicinity Centres packages found on PyPI, Maven Central, NuGet or
+  other registries in this pass.
+packages:
+- name: '@vicinity/eslint-config-vcx'
+  registry: npm
+  url: https://www.npmjs.com/package/@vicinity/eslint-config-vcx
+  language: JavaScript
+  official: true
+  version: 2.2.0
+  published: '2024-05-14'
+  kind: dev-tooling
+  note: Shared ESLint config for Vicinity projects; not an API SDK. Repository git+https://github.com/vicinity/eslint-config-vcx.git
+- name: '@vicinity/vcx-tsconfig'
+  registry: npm
+  url: https://www.npmjs.com/package/@vicinity/vcx-tsconfig
+  language: TypeScript
+  official: true
+  version: 1.0.2
+  published: '2024-05-17'
+  kind: dev-tooling
+  note: Base TSConfig for Vicinity projects; not an API SDK. Source https://github.com/vicinity/vcx-tsconfig

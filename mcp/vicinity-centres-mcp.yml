@@ -1,0 +1,20 @@
+name: Vicinity Centres MCP Server
+type: MCPServer
+generated: '2026-10-22'
+method: none
+status: none
+description: No official hosted or local MCP server from Vicinity Centres was found, and there is no public OpenAPI to derive a candidate tool list from. The only API surface we saw is the invite-only Vicinity Connect retailer portal, whose /graphql endpoint answers 401 (gated).
+deployment:
+  mode: none
+  auth: unknown
+  verified: searched
+tools: []
+evidence:
+- url: https://www.vicinity.com.au/llms.txt
+  status: 404
+  note: Rendered 404 page; there is no llms.txt or agent index on the corporate site.
+- url: https://portal.vicinity.com.au/graphql
+  status: 401
+  note: Gated GraphQL endpoint on the retailer portal (preflight contract_discovery, control 200). It is not an MCP server.
+- search: '"Vicinity Centres" MCP server OR "llms.txt" OR "developer API"'
+  result: No results mention the company.

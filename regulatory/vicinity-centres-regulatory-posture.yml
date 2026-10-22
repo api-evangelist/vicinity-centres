@@ -1,0 +1,36 @@
+name: Vicinity Centres Regulatory Posture
+description: Regulatory posture taken from Vicinity Centres' own Privacy Policy and Digital Terms and Conditions. Australian Privacy Act framing, with complaints escalated to the OAIC. The pages do not cover retention periods, breach notification, AI transparency, Global Privacy Control, accessibility conformance or a named subprocessor list.
+generated: '2026-10-22'
+method: searched
+source:
+  - https://www.vicinity.com.au/privacy-policy
+  - https://www.vicinity.com.au/terms-and-conditions
+jurisdictions:
+  - AU
+signals:
+  - signal: data_subject_request
+    url: https://www.vicinity.com.au/privacy-policy
+    section: How you can access or correct your personal information
+    note: Individuals can ask for access to and correction of their personal information through the privacy team, and identity verification may be required. Complaints that are not resolved can be taken to the OAIC. There is no self-service portal and no deletion or portability right is mentioned.
+    evidence:
+      source: https://www.vicinity.com.au/privacy-policy
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: "You can seek access to, or correction of, the personal information we hold about you by contacting our privacy team using the details provided at the end of this Privacy Policy."
+    supporting_quotes:
+      - "Before we give you access to information or agree to correct your information, we may require you to verify your identity."
+      - "If we are unable to provide a final response within 30 days we will contact you to explain why and discuss an appropriate timeframe to investigate the complaint."
+  - signal: data_residency
+    url: https://www.vicinity.com.au/privacy-policy
+    section: Overseas disclosures of personal information
+    note: Data is mostly stored in Australia, but service and technology providers may handle it in the listed overseas countries. This is a disclosure, not a residency guarantee. The WiFi notice in the Digital Terms names the USA and Singapore.
+    evidence:
+      source: https://www.vicinity.com.au/privacy-policy
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: "However, some of our service and technology providers may operate and handle personal information overseas, including in the United States, Singapore, the European Union (for example, France and Germany), New Zealand, the United Kingdom, Canada, India, Japan and the Philippines."
+    supporting_quotes:
+      - "We mostly store personal information in Australia."
+      - source: https://www.vicinity.com.au/terms-and-conditions
+        section: Vicinity WiFi privacy notice
+        quote: "We may also disclose your personal information to our related bodies corporate and service providers, including those located in the USA and Singapore."

@@ -1,0 +1,16 @@
+generated: '2026-10-22'
+method: none
+source:
+- https://zapier.com/apps/vicinity-centres/integrations
+- https://n8n.io/integrations/vicinity-centres/
+- https://composio.dev/toolkits/vicinity-centres
+- https://monid.ai/tools/vicinity-centres
+checked:
+- https://composio.dev/toolkits/vicinity-centres
+- https://monid.ai/tools/vicinity-centres
+- https://n8n.io/integrations/vicinity-centres/
+- https://zapier.com/apps/vicinity-centres/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []
